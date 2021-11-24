@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.7 on win32)" generated="20211124 11:24:39.370" rpa="false" schemaversion="2">
+<suite id="s1" name="loginTest" source="c:\Users\MARA087\Desktop\onboarding issue pictures\automation training\demo_proj_robot_Maracine_Alexandru\test_suites\loginTest.robot">
+<test id="s1-t1" name="Basic functionality test">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${emagUrl}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211124 11:24:39.739" level="INFO">Opening browser 'chrome' to base url 'https://www.emag.ro/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211124 11:24:46.596" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<status status="FAIL" starttime="20211124 11:24:42.520" endtime="20211124 11:24:46.597"/>
+</kw>
+<msg timestamp="20211124 11:24:46.597" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<msg timestamp="20211124 11:24:46.607" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<status status="FAIL" starttime="20211124 11:24:39.739" endtime="20211124 11:24:46.607"/>
+</kw>
+<kw name="Accept cookies" library="loginPage">
+<status status="NOT RUN" starttime="20211124 11:24:46.607" endtime="20211124 11:24:46.607"/>
+</kw>
+<kw name="Navigate through pages" library="loginPage">
+<status status="NOT RUN" starttime="20211124 11:24:46.608" endtime="20211124 11:24:46.608"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, ${scrollingPixels})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20211124 11:24:46.608" endtime="20211124 11:24:46.608"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>2x</arg>
+<arg>2s</arg>
+<arg>Sorting changes From Popular to Latest</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20211124 11:24:46.609" endtime="20211124 11:24:46.609"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${firstItemName}</var>
+<arg>${firstElementInList}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211124 11:24:46.609" endtime="20211124 11:24:46.609"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211124 11:24:46.610" endtime="20211124 11:24:46.610"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cartIsNotEmpty}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20211124 11:24:46.610" endtime="20211124 11:24:46.610"/>
+</kw>
+<kw name="Search by" library="loginPage">
+<arg>${cartButton}</arg>
+<status status="NOT RUN" starttime="20211124 11:24:46.610" endtime="20211124 11:24:46.610"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${nameOfItemInCart}</var>
+<arg>${firstElementInCart}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211124 11:24:46.611" endtime="20211124 11:24:46.611"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${firstItemName}</arg>
+<arg>${nameOfItemInCart}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20211124 11:24:46.611" endtime="20211124 11:24:46.611"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211124 11:24:46.612" endtime="20211124 11:24:48.648"/>
+</kw>
+<status status="FAIL" starttime="20211124 11:24:39.738" endtime="20211124 11:24:48.649">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=92.0.4515.107)
+</status>
+</test>
+<status status="FAIL" starttime="20211124 11:24:39.372" endtime="20211124 11:24:48.651"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="loginTest">loginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211124 11:24:46.597" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</msg>
+</errors>
+</robot>
